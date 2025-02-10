@@ -13,3 +13,5 @@ jobs:
       - name: Print Hello World # nummer 4
         run: echo "Hello, World from ${CWD} as ${USER}!"
 
+      - name: Orientierung gewinnen
+        run: ls -l && find
