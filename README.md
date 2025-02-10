@@ -1,0 +1,2 @@
+# lifecycle
+AI generative lifecycle
