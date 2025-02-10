@@ -1,0 +1,4 @@
+Voraussetzung: clouds.yaml muss vorliegen und gültige Credentials enthalten.
+Voraussetzung: In der Cloud muss der private Schlüssel für das Keypair "magnus" hinterlegt sein. 
+Host: lokal
+Schreibe eine Bash-Skript, dass Terraform für die "opentelekomcloud" mit curl herunterlädt und auf dem lokalen System installiert.
