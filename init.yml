@@ -1,0 +1,15 @@
+name: Hello World nummer 1
+
+on: push  # Workflow wird bei jedem Push ausgeführt
+
+jobs:
+  hello: # nummer 2
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository # nummer 3
+        uses: actions/checkout@v4
+
+      - name: Print Hello World # nummer 4
+        run: echo "Hello, World from ${CWD} as ${USER}!"
+
