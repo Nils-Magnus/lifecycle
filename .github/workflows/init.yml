@@ -1,6 +1,8 @@
+---
 name: Hello World nummer 1
 
-on: push  # Workflow wird bei jedem Push ausgeführt
+# Workflow wird bei jedem Push ausgeführt
+on: push
 
 jobs:
   hello: # nummer 2
@@ -20,10 +22,10 @@ jobs:
         run: cat $GITHUB_EVENT_PATH
 
       - name: Vorher noch jq installieren
-        run: apt install jq
+        run: sudo apt install jq
       
       - name: Geänderte Dateien extrahieren und anzeigen
         run: jq '.commits[].modified + .commits[].added + .commits[].removed' $GITHUB_EVENT_PATH
         
       - name: Send HTTP POST Request (JSON)
-        run: curl -X POST "http://target.gypriot.de/v1/action" -H "Content-Type: application/json" -d '{"status":"done"}'
+        run: curl -X POST 'http://target.gypriot.de/v1/action' -H 'Content-Type: application/json' -d '{"status":"done"}'
