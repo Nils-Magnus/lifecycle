@@ -19,7 +19,7 @@ jobs:
       - name: Welche Dateien wurden geändert?
         run: cat $GITHUB_EVENT_PATH
 
-      - name:  Vorher noch jq installieren:
+      - name: Vorher noch jq installieren
         run: apt install jq
       
       - name: Geänderte Dateien extrahieren und anzeigen:
