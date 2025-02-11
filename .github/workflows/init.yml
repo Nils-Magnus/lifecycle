@@ -26,4 +26,4 @@ jobs:
         run: jq '.commits[].modified + .commits[].added + .commits[].removed' $GITHUB_EVENT_PATH
         
       - name: Send HTTP POST Request (JSON)
-        run: curl -X POST http://target.gypriot.de/action -H "Content-Type: application/json" -d '{"status":"done"}'
+        run: curl -X POST "http://target.gypriot.de/v1/action" -H "Content-Type: application/json" -d '{"status":"done"}'
