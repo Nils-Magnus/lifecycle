@@ -29,12 +29,10 @@ jobs:
 
       - name: Send HTTP POST Request (JSON)
         run: |
-          curl -X POST "http://mqtt.gypriot.de/v1/action" \
+          curl --max-time 10 --connect-timeout 10 --silent --show-error \
+               -X POST "http://mqtt.gypriot.de/v1/action" \
                -H "Content-Type: application/json" \
                -d '{"status":"one"}'
-
-      - name: Send HTTP POST Request (JSON)
-        run: curl -X POST 'http://mqtt.gypriot.de/v1/action' -H 'Content-Type:application/json' -d '{"status":"two"}'
 
       - name: Send HTTP POST Request (JSON)
         run: curl -X POST "http://mqtt.gypriot.de/v1/action" -H "Content-Type:application/json" -d '{"status":"three"}'
