@@ -29,12 +29,12 @@ jobs:
 
       - name: Send HTTP POST Request (JSON)
         run: |
-          curl -X POST "http://target.gypriot.de/v1/action" \
+          curl -X POST "http://mqtt.gypriot.de/v1/action" \
                -H "Content-Type: application/json" \
-               -d '{"status":"done"}'
+               -d '{"status":"one"}'
 
       - name: Send HTTP POST Request (JSON)
-        run: curl -X POST 'http://target.gypriot.de/v1/action' -H 'Content-Type:application/json' -d '{"status":"done"}'
+        run: curl -X POST 'http://mqtt.gypriot.de/v1/action' -H 'Content-Type:application/json' -d '{"status":"two"}'
 
       - name: Send HTTP POST Request (JSON)
-        run: curl -X POST "http://target.gypriot.de/v1/action" -H "Content-Type:application/json" -d '{"status":"done"}'
+        run: curl -X POST "http://mqtt.gypriot.de/v1/action" -H "Content-Type:application/json" -d '{"status":"three"}'
